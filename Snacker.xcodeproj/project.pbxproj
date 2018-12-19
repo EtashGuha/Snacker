@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E2CEEBF21C4154A001232C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2CEEBE21C4154A001232C9 /* AppDelegate.swift */; };
+		2E2CEEC121C4154A001232C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2CEEC021C4154A001232C9 /* ViewController.swift */; };
+		2E2CEEC421C4154A001232C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2CEEC221C4154A001232C9 /* Main.storyboard */; };
+		2E2CEEC621C4154B001232C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E2CEEC521C4154B001232C9 /* Assets.xcassets */; };
+		2E2CEEC921C4154B001232C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2CEEC721C4154B001232C9 /* LaunchScreen.storyboard */; };
+		2E2CEED421C4154B001232C9 /* SnackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2CEED321C4154B001232C9 /* SnackerTests.swift */; };
+		2E2CEEDF21C416BB001232C9 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2CEEDE21C416BB001232C9 /* PostTableViewCell.swift */; };
+		2E2CEEE121C4194C001232C9 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2CEEE021C4194C001232C9 /* PostTableViewController.swift */; };
+		2E2CEEE321C41F2A001232C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E2CEEE221C41F2A001232C9 /* GoogleService-Info.plist */; };
+		B9548A5C647238320B1CAB81 /* libPods-Snacker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832A7C8BCB3CA7155113BA10 /* libPods-Snacker.a */; };
+		BFCC3223DD094DF596983DE6 /* libPods-SnackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 085B55A5E10F2228506BD5F9 /* libPods-SnackerTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E2CEED021C4154B001232C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E2CEEB321C4154A001232C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E2CEEBA21C4154A001232C9;
+			remoteInfo = Snacker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03AD55B1F3D36B38F17C7C3B /* Pods-SnackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnackerTests/Pods-SnackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		085B55A5E10F2228506BD5F9 /* libPods-SnackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SnackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FB2C08FC489971B091002B5 /* Pods-Snacker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snacker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snacker/Pods-Snacker.release.xcconfig"; sourceTree = "<group>"; };
+		2E2CEEBB21C4154A001232C9 /* Snacker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snacker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E2CEEBE21C4154A001232C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E2CEEC021C4154A001232C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E2CEEC321C4154A001232C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E2CEEC521C4154B001232C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E2CEEC821C4154B001232C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E2CEECA21C4154B001232C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E2CEECF21C4154B001232C9 /* SnackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E2CEED321C4154B001232C9 /* SnackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackerTests.swift; sourceTree = "<group>"; };
+		2E2CEED521C4154B001232C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E2CEEDE21C416BB001232C9 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		2E2CEEE021C4194C001232C9 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
+		2E2CEEE221C41F2A001232C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7F8CE969DAF684E5B1FA1186 /* Pods-SnackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnackerTests/Pods-SnackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		832A7C8BCB3CA7155113BA10 /* libPods-Snacker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Snacker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2E79E0695048415E93AA65D /* Pods-Snacker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snacker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snacker/Pods-Snacker.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E2CEEB821C4154A001232C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9548A5C647238320B1CAB81 /* libPods-Snacker.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E2CEECC21C4154B001232C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFCC3223DD094DF596983DE6 /* libPods-SnackerTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E2CEEB221C4154A001232C9 = {
+			isa = PBXGroup;
+			children = (
+				2E2CEEBD21C4154A001232C9 /* Snacker */,
+				2E2CEED221C4154B001232C9 /* SnackerTests */,
+				2E2CEEBC21C4154A001232C9 /* Products */,
+				ADFC14C003A6B237CEEF706E /* Pods */,
+				B0CA1D537E89707BCB39A2A7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2E2CEEBC21C4154A001232C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E2CEEBB21C4154A001232C9 /* Snacker.app */,
+				2E2CEECF21C4154B001232C9 /* SnackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E2CEEBD21C4154A001232C9 /* Snacker */ = {
+			isa = PBXGroup;
+			children = (
+				2E2CEEBE21C4154A001232C9 /* AppDelegate.swift */,
+				2E2CEEC021C4154A001232C9 /* ViewController.swift */,
+				2E2CEEC221C4154A001232C9 /* Main.storyboard */,
+				2E2CEEC521C4154B001232C9 /* Assets.xcassets */,
+				2E2CEEC721C4154B001232C9 /* LaunchScreen.storyboard */,
+				2E2CEECA21C4154B001232C9 /* Info.plist */,
+				2E2CEEDE21C416BB001232C9 /* PostTableViewCell.swift */,
+				2E2CEEE021C4194C001232C9 /* PostTableViewController.swift */,
+				2E2CEEE221C41F2A001232C9 /* GoogleService-Info.plist */,
+			);
+			path = Snacker;
+			sourceTree = "<group>";
+		};
+		2E2CEED221C4154B001232C9 /* SnackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E2CEED321C4154B001232C9 /* SnackerTests.swift */,
+				2E2CEED521C4154B001232C9 /* Info.plist */,
+			);
+			path = SnackerTests;
+			sourceTree = "<group>";
+		};
+		ADFC14C003A6B237CEEF706E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2E79E0695048415E93AA65D /* Pods-Snacker.debug.xcconfig */,
+				0FB2C08FC489971B091002B5 /* Pods-Snacker.release.xcconfig */,
+				03AD55B1F3D36B38F17C7C3B /* Pods-SnackerTests.debug.xcconfig */,
+				7F8CE969DAF684E5B1FA1186 /* Pods-SnackerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B0CA1D537E89707BCB39A2A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				832A7C8BCB3CA7155113BA10 /* libPods-Snacker.a */,
+				085B55A5E10F2228506BD5F9 /* libPods-SnackerTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E2CEEBA21C4154A001232C9 /* Snacker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E2CEED821C4154B001232C9 /* Build configuration list for PBXNativeTarget "Snacker" */;
+			buildPhases = (
+				E5EA24C5A5B367BAD628FD96 /* [CP] Check Pods Manifest.lock */,
+				2E2CEEB721C4154A001232C9 /* Sources */,
+				2E2CEEB821C4154A001232C9 /* Frameworks */,
+				2E2CEEB921C4154A001232C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Snacker;
+			productName = Snacker;
+			productReference = 2E2CEEBB21C4154A001232C9 /* Snacker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E2CEECE21C4154B001232C9 /* SnackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E2CEEDB21C4154B001232C9 /* Build configuration list for PBXNativeTarget "SnackerTests" */;
+			buildPhases = (
+				49A7F972F9D0D8B74A0344BC /* [CP] Check Pods Manifest.lock */,
+				2E2CEECB21C4154B001232C9 /* Sources */,
+				2E2CEECC21C4154B001232C9 /* Frameworks */,
+				2E2CEECD21C4154B001232C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E2CEED121C4154B001232C9 /* PBXTargetDependency */,
+			);
+			name = SnackerTests;
+			productName = SnackerTests;
+			productReference = 2E2CEECF21C4154B001232C9 /* SnackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E2CEEB321C4154A001232C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Etash Guha";
+				TargetAttributes = {
+					2E2CEEBA21C4154A001232C9 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					2E2CEECE21C4154B001232C9 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 2E2CEEBA21C4154A001232C9;
+					};
+				};
+			};
+			buildConfigurationList = 2E2CEEB621C4154A001232C9 /* Build configuration list for PBXProject "Snacker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E2CEEB221C4154A001232C9;
+			productRefGroup = 2E2CEEBC21C4154A001232C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E2CEEBA21C4154A001232C9 /* Snacker */,
+				2E2CEECE21C4154B001232C9 /* SnackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E2CEEB921C4154A001232C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E2CEEC921C4154B001232C9 /* LaunchScreen.storyboard in Resources */,
+				2E2CEEE321C41F2A001232C9 /* GoogleService-Info.plist in Resources */,
+				2E2CEEC621C4154B001232C9 /* Assets.xcassets in Resources */,
+				2E2CEEC421C4154A001232C9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E2CEECD21C4154B001232C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49A7F972F9D0D8B74A0344BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SnackerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5EA24C5A5B367BAD628FD96 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Snacker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E2CEEB721C4154A001232C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E2CEEC121C4154A001232C9 /* ViewController.swift in Sources */,
+				2E2CEEE121C4194C001232C9 /* PostTableViewController.swift in Sources */,
+				2E2CEEBF21C4154A001232C9 /* AppDelegate.swift in Sources */,
+				2E2CEEDF21C416BB001232C9 /* PostTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E2CEECB21C4154B001232C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E2CEED421C4154B001232C9 /* SnackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E2CEED121C4154B001232C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E2CEEBA21C4154A001232C9 /* Snacker */;
+			targetProxy = 2E2CEED021C4154B001232C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E2CEEC221C4154A001232C9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E2CEEC321C4154A001232C9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E2CEEC721C4154B001232C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E2CEEC821C4154B001232C9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E2CEED621C4154B001232C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2E2CEED721C4154B001232C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E2CEED921C4154B001232C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2E79E0695048415E93AA65D /* Pods-Snacker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84VXHC6BQS;
+				INFOPLIST_FILE = Snacker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = etashguha.Snacker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E2CEEDA21C4154B001232C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FB2C08FC489971B091002B5 /* Pods-Snacker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84VXHC6BQS;
+				INFOPLIST_FILE = Snacker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = etashguha.Snacker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2E2CEEDC21C4154B001232C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03AD55B1F3D36B38F17C7C3B /* Pods-SnackerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = etashguha.SnackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snacker.app/Snacker";
+			};
+			name = Debug;
+		};
+		2E2CEEDD21C4154B001232C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F8CE969DAF684E5B1FA1186 /* Pods-SnackerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = etashguha.SnackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snacker.app/Snacker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E2CEEB621C4154A001232C9 /* Build configuration list for PBXProject "Snacker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E2CEED621C4154B001232C9 /* Debug */,
+				2E2CEED721C4154B001232C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E2CEED821C4154B001232C9 /* Build configuration list for PBXNativeTarget "Snacker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E2CEED921C4154B001232C9 /* Debug */,
+				2E2CEEDA21C4154B001232C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E2CEEDB21C4154B001232C9 /* Build configuration list for PBXNativeTarget "SnackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E2CEEDC21C4154B001232C9 /* Debug */,
+				2E2CEEDD21C4154B001232C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E2CEEB321C4154A001232C9 /* Project object */;
+}
