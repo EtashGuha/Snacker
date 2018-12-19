@@ -22,6 +22,7 @@ class PostTableViewCell: UITableViewCell {
         var textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.isScrollEnabled = false
+        textView.isEditable = false
         return textView
     }()
     
