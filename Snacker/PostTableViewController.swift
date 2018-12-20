@@ -8,21 +8,26 @@
 
 import UIKit
 import Firebase
+import CoreLocation
+import MapKit
 
 struct cellData{
     let image: UIImage?
     let message: String?
 }
 
-class PostTableViewController: UITableViewController {
+class PostTableViewController: UITableViewController, CLLocationManagerDelegate{
     
     var count: Int!
     var userString: String!
     var passedDataString: String = "chicken"
     var posts = [cellData]()
     var imageToBeAdded: UIImage!
-     var ref: DatabaseReference!
+    var ref: DatabaseReference!
     var databaseHandle: DatabaseHandle?
+    var locationManager = CLLocationManager()
+    var location: CLLocation!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +38,10 @@ class PostTableViewController: UITableViewController {
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 200
         
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
         readFromFirebase()
     }
     
@@ -66,9 +75,18 @@ class PostTableViewController: UITableViewController {
         ref = Database.database().reference()
         databaseHandle = ref?.child("Posts").observe(.childAdded, with: { (snapshot) in
             if let data = snapshot.value as? NSArray{
-                self.updateTableView(message: (data[1] as? String)!, strBase64: (data[2] as? String)!)
+                let otherLocation = CLLocation(latitude: data[3] as! CLLocationDegrees, longitude: data[4] as! CLLocationDegrees)
+                
+                let distanceInMeters = self.location.distance(from: otherLocation)
+                if distanceInMeters < 3 * 1609 {// 3 miles in meters
+                    self.updateTableView(message: (data[1] as? String)!, strBase64: (data[2] as? String)!)
+                }
             }
         })
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        location = locations[0]
     }
 }
 
