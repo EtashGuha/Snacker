@@ -20,6 +20,10 @@ class ViewController: UIViewController,  UINavigationControllerDelegate, UIImage
     @IBOutlet weak var foodImage: UIImageView!
     var locationManager = CLLocationManager()
     var location: CLLocation!
+    var postalCode: String!
+    var country: String!
+    var locationName: String!
+    var city: String!
     var ref: DatabaseReference!
     
     @IBAction func importImage(_ sender: Any) {
@@ -47,19 +51,40 @@ class ViewController: UIViewController,  UINavigationControllerDelegate, UIImage
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         location = locations[0]
-        
+        CLGeocoder().reverseGeocodeLocation(location) { (placemark, error) in
+            if error != nil{
+                print("there was an error")
+            } else {
+                if let place = placemark?[0]{
+                    self.locationName = place.name
+                    self.postalCode = place.postalCode
+                    self.city = place.locality
+                    self.country = place.country
+                }
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let imageData = foodImage.image?.jpegData(compressionQuality: 0.01)
+        
+        
         let strBase64 = imageData?.base64EncodedString(options: .lineLength64Characters)
-        let stuffToPost = ["addasdfasdfress", foodDescription.text!, strBase64!, location.coordinate.latitude, location.coordinate.longitude] as [Any]
+        let stuffToPost = ["Time": Date().timeIntervalSince1970,
+                           "Food Name" : foodDescription.text!,
+                           "Picture": strBase64!,
+                           "Latitude": location.coordinate.latitude,
+                           "Longitude": location.coordinate.longitude,
+                           "Address": getLocation()] as [String : Any]
         ref.child("Posts").childByAutoId().setValue(stuffToPost)
+    }
+    
+    func getLocation() -> String{
+        return locationName + "\n" + city + ", " + country + ", " + postalCode
     }
 }
 

@@ -21,6 +21,7 @@ class PostTableViewCell: UITableViewCell {
     var messageView: UITextView = {
         var textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.font = UIFont.systemFont(ofSize: 35)
         textView.isScrollEnabled = false
         textView.isEditable = false
         return textView
@@ -38,15 +39,15 @@ class PostTableViewCell: UITableViewCell {
         self.addSubview(mainImageView)
         self.addSubview(messageView)
         
-        mainImageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        mainImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        mainImageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        mainImageView.bottomAnchor.constraint(equalTo: self.messageView.topAnchor).isActive = true
-        mainImageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        
         messageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        messageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         messageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        messageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        messageView.bottomAnchor.constraint(equalTo: self.mainImageView.topAnchor).isActive = true
+        
+        mainImageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        mainImageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        mainImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        mainImageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
     }
     
     override func layoutSubviews() {

@@ -27,7 +27,13 @@ class PostTableViewController: UITableViewController, CLLocationManagerDelegate{
     var databaseHandle: DatabaseHandle?
     var locationManager = CLLocationManager()
     var location: CLLocation!
-
+    var postalCode: String!
+    var country: String!
+    var locationName: String!
+    var city: String!
+    var firstTimeReadingDatabase = true
+    let dayToSeconds = 86400
+    let metersToMiles = 3 * 1609
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +48,7 @@ class PostTableViewController: UITableViewController, CLLocationManagerDelegate{
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        readFromFirebase()
+        
     }
     
 
@@ -74,12 +80,11 @@ class PostTableViewController: UITableViewController, CLLocationManagerDelegate{
     func readFromFirebase(){
         ref = Database.database().reference()
         databaseHandle = ref?.child("Posts").observe(.childAdded, with: { (snapshot) in
-            if let data = snapshot.value as? NSArray{
-                let otherLocation = CLLocation(latitude: data[3] as! CLLocationDegrees, longitude: data[4] as! CLLocationDegrees)
-                
+            if let data = snapshot.value as? [String: Any]{
+                let otherLocation = CLLocation(latitude: data["Latitude"] as! CLLocationDegrees, longitude: data["Longitude"] as! CLLocationDegrees)
                 let distanceInMeters = self.location.distance(from: otherLocation)
-                if distanceInMeters < 3 * 1609 {// 3 miles in meters
-                    self.updateTableView(message: (data[1] as? String)!, strBase64: (data[2] as? String)!)
+                if Int(distanceInMeters) < self.metersToMiles && Int((Date().timeIntervalSince1970 - (data["Time"] as! Double))) < self.dayToSeconds {
+                    self.updateTableView(message: (data["Food Name"] as? String)!, strBase64: (data["Picture"] as? String)!)
                 }
             }
         })
@@ -87,6 +92,10 @@ class PostTableViewController: UITableViewController, CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         location = locations[0]
+        if firstTimeReadingDatabase {
+            firstTimeReadingDatabase = false
+            readFromFirebase()
+        }
     }
 }
 
